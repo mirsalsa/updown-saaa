@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Uploader
+{%endblock %} {% block content %} {% include 'navbar.html' %}
+<!-- <div class="main-text">Upload Your Files!</div> -->
+<div class="first-container vertical-center">
+  <img class="samping" src="{% static 'img/Welcome-rafiki.png' %}" />
+  <div class="col-md-6 beranda"">
+    <h1><b>Upload Your Files!</b></h1>
+    <p>
+      We The Fest adalah acara festival tahunan yang berisi konser musik,
+      pameran seni, bazaar makanan serta pameran fashion yang diselenggarakan di
+      Jakarta.
+    </p>
+    <button class="btn registerbutton">
+      <a href="/preform">
+        <div><strong>Add your doc</strong></div>
+      </a>
+    </button>
+  </div>
+</div>
+<!-- <div class="section" id="wtf">
+  <div class="caption">
+    <h1><b>WE THE FEST 2020</b></h1>
+    <p>
+      We The Fest adalah acara festival tahunan yang berisi konser musik,
+      pameran seni, bazaar makanan serta pameran fashion yang diselenggarakan di
+      Jakarta.
+    </p>
+    
+  </div>
+  <div class="wtf-img">
+    <img
+      class="img-fluid float-right"
+      src="{% static 'img/Welcome-rafiki.png' %}"
+    />
+  </div>
+</div> -->
+
+{% include 'footer.html' %} {% endblock %}

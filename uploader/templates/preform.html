@@ -1,0 +1,62 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Form Uploader
+{%endblock %} {% block content %} {% include 'navbar.html' %}
+<div class="vertical-center">
+  <div class="main-text"></div>
+  <div class="container">
+    <div class="card text-center vertical-center">
+      <div class="card-title">Unggah Dokumen</div>
+      <div class="card-body" style="margin-top: 10%">
+        <form method="post" action="" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div>
+            <p>
+              <strong>File Name:</strong><br />
+              {{regist.file_name}}
+            </p>
+          </div>
+          <br />
+          <div>
+            <p>
+              <strong>File Document:</strong><br />
+              {{regist.file_docs}}
+            </p>
+          </div>
+          <br />
+          <button class="btn registerbutton" type="submit">
+            <strong>Submit</strong>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="first-container vertical-center">
+  <div class="main-text align-items-center">Unggah Dokumen</div>
+  <div class="col-md-6 beranda">
+    <div class="card text-center">
+      <div class="card-body">
+        <form method="post" action="" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div>
+            <p>
+              <strong>File Name:</strong><br />
+              {{regist.file_name}}
+            </p>
+          </div>
+          <br />
+          <div>
+            <p>
+              <strong>File Document:</strong><br />
+              {{regist.file_docs}}
+            </p>
+          </div>
+          <br />
+          <button class="btn registerbutton" type="submit">
+            <strong>Submit</strong>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+{% include 'footer.html' %} {% endblock %}

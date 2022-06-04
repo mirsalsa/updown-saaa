@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% load static %} {% block title %} YEY {%endblock %}
+{% block content %} {% include 'navbar.html' %}
+<div class="vertical-center">
+  <div class="header">Registration Complete</div>
+  <div class="subheader">Terima kasih sudah menambahkan file anda<br /></div>
+
+  <div
+    class="tables-responsive text-center"
+    style="margin-left: 5%; margin-right: 5%"
+  >
+    <table class="table table-hover">
+      <thead bgcolor="#b1eebb">
+        <tr>
+          <th scope="col">File Name</th>
+          <th scope="col">File Docs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {% for file in files %}
+        </tr>
+        <tr>
+          <td>{{file.file_name}}</td>
+          <td>
+            <a
+              href="{{ file.file_docs.url }}"
+              download
+              class="btn btn-outline-success"
+            >
+              Download File</a
+            >
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <button
+    class="btn registerbutton row d-flex justify-content-center"
+    style="margin-bottom: 15vh"
+  >
+    <a href="/" style="text-decoration: none; color: rgb(3, 0, 0)"
+      ><strong>Kembali ke Beranda</strong></a
+    >
+  </button>
+</div>
+
+{% include 'footer.html' %} {% endblock %}

@@ -72,6 +72,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'updown.urls'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'documents')
+
+MEDIA_URL = '/documents/'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

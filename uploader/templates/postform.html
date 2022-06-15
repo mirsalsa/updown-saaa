@@ -13,6 +13,8 @@
         <tr>
           <th scope="col">File Name</th>
           <th scope="col">File Docs</th>
+          <th scope="col">Day</th>
+          <th scope="col">Time</th>
         </tr>
       </thead>
       <tbody>
@@ -30,6 +32,8 @@
               Download File</a
             >
           </td>
+          <td>{{file.file_date |date:'l'}}</td>
+          <td>{{file.file_date |date:"U"}}</td>
         </tr>
         {% endfor %}
       </tbody>

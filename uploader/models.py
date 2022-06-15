@@ -1,7 +1,6 @@
 from datetime import date
 import os
 from django.db import models
-from unixtimestampfield.fields import UnixTimeStampField
 
 # Create your models here.
 def create_name(instance, filename):
